@@ -10,21 +10,11 @@ class Boat {
     World.add(world, this.body);
   }
 
-  // 06) mét remove (recebe indice do navio como parametro)
-  remove(i) {
-    // 07) setTimeout(callback, tempo em millisec)
+  remove(index) {
     setTimeout(() => {
-      Matter.World.remove(world, boats[i].body);
-      delete boats[i];
-    } , 2000);
-
-      // 08) WORLD.remove removendo o corpo NAVIO do mundo
-
-
-      // 09) deletando o NAVIO da lista -> delete boats[index]
-    
-
-    // 10) EM SKETCH ->
+      Matter.World.remove(world, boats[index].body);
+      delete boats[index];
+    }, 2000);
   }
 
   display() {
