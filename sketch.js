@@ -56,8 +56,6 @@ function draw() {
 
   for (var i = 0; i < balls.length; i++) {
     showCannonBalls(balls[i], i);
-
-    // 13) chamar na func draw
     collisionWithBoat(i);
   }
 
@@ -68,32 +66,8 @@ function draw() {
 
 // 01) func anaisa colisão entre TODAS balas e TODOS os navios
 function collisionWithBoat(iBall) {
-  // 02) for para acessar cada pos de boats
   for (var i = 0; i < boats.length; i++) {
-
-    // 03) if para verificar se boats e balls não sao indef
-    if (balls[iBall] !== undefined && boats[i] !== undefined) {
-
-      // 04) cria var e guardar retorno da func Matter.SAT.collide(corpo1, corpo2);
-      var collision = Matter.SAT.collides(balls[iBall].body, boats[i].body);
-
-      // 05) if -> se collision.collided é true, remover navio
-      if (collision.collided) {
-
-        // 06) EM BOAT -> criar mét remove
-        boats[i].remove(i);
-
-
-        // 10) remover BALA do mundo
-        Matter.World.remove(world, balls[iBall].body);
-
-        // 11) deletando a BALA da lista
-        delete balls[iBall];
-
-        // 12) chamar na func draw
-        // 13) ALUNO cria remove na classe das balas e as remove em showCannonballs
-      }
-    }
+    
   }
 }
 
