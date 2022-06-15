@@ -64,10 +64,12 @@ function draw() {
 
 }
 
-// 01) func anaisa colisão entre TODAS balas e TODOS os navios
 function collisionWithBoat(iBall) {
   for (var i = 0; i < boats.length; i++) {
-    
+    if (balls[iBall] !== undefined && boats[i] !== undefined) {
+    // 01. analisar colisão entre balas e barcos
+      
+    }
   }
 }
 
