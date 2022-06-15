@@ -85,8 +85,6 @@ function keyPressed() {
 function showCannonBalls(ball, index) {
   if (ball) {
     ball.display();
-
-    // 14) ALUNO - verificar pos X da bala >= largura da tela || posY é > height-50
     if (ball.body.position.x >= width || ball.body.position.y >= height - 50) {
       ball.remove(index);
     }
